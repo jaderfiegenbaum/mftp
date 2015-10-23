@@ -1,0 +1,26 @@
+1- Compilar os arquivos MFTPTransmissor.java, MFTPReceptor.java e Pacote.java
+
+Ex:
+javac MFTPTransmissor.java -Xlint
+javac MFTPReceptor.java
+javac Pacote.java
+
+
+2- Rodar os receptores com 
+java MFTPReceptor
+
+3- Rodar o transmissor com 
+java MFTPTransmissor caminho_completo_do_arquivo quantidade_receptores
+
+Ex:
+java MFTPTransmissor /tmp/ZEROBALA.zip 1
+
+Onde "/tmp/ZEROBALA.zip" é o arquivo a ser transmitido e "1" é a quantidade de receptores.
+
+4- Funcionamento:
+
+Os receptores devem estar rodando antes do transmissor.
+O receptor, a cada pacote recebido, verifica seu md5, caso esteja certo, avisa o receptor que recebeu o pacote, enviando o md5 de volta.
+O transmissor espera a resposta de cada receptor, comparando se o md5 recebido é igual ao enviado. Caso esteja certo, envia o próximo pacote.
+
+
