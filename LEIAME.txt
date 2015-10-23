@@ -5,7 +5,6 @@ javac MFTPTransmissor.java -Xlint
 javac MFTPReceptor.java
 javac Pacote.java
 
-
 2- Rodar os receptores com 
 java MFTPReceptor
 
